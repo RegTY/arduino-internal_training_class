@@ -7,6 +7,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 *******************************************************************************/
 
 #include <stdio.h>
+#include <conio.h>
 
 int main()
 {
@@ -14,22 +15,26 @@ int main()
     int userAnswer;
     printf("Enter a number:");
     scanf("%i", &answer );
+    //clrscr();
+    system("clear");
     
     printf("Guess my number:");
     scanf("%i", &userAnswer);
     
     while (userAnswer != answer){
         int difference = userAnswer - answer;
-        // if (userAnswer > answer && 0 < difference <= 10){
-        //     printf("Your answer is very close! Try again!:");
-        //     scanf("%i", &userAnswer);
-        // }
-        //  else if (userAnswer == 1337){
-        //     printf("Your answer is very close! Try again!");
-        //     scanf("%i", &userAnswer);
-        //  }
-        // else if userAnswer < answer and -10 <= difference < 0:
-        //     userAnswer = int(input("The number is higher, you are very close! Try again! "))
+        if (userAnswer > answer && difference <= 10 && difference > 0){
+            printf("The number is lower! Your answer is very close! Try again!:");
+            scanf("%i", &userAnswer);
+        }
+         else if (userAnswer == 1337){
+            printf("You entered the cheat code, here is the answer: %i", answer);
+            scanf("%i", &userAnswer);
+         }
+        else if (userAnswer < answer && difference < 0 && difference >= -10){
+            printf("he number is higher, you are very close! Try again! ");
+            scanf("%i", &userAnswer);
+        }
         if (userAnswer < answer){
             printf("The number is higher! Try again! :");
             scanf("%i", &userAnswer);
