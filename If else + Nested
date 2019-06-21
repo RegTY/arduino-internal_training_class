@@ -27,8 +27,57 @@ int main()
     return 0;
 }
 
+Example 2 (if Else-if Else)
 
-Example 2 (Nested If-Else)
+
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    float cgpa;
+    printf("Enter your CGPA:");
+    scanf("%f", &cgpa);
+    if (cgpa > 3.67) {
+        printf("Grade : A");
+    }
+    else if (cgpa >3.33 && cgpa <=3.67){
+        printf("Grade : A-");
+    }
+    else if (cgpa >3 && cgpa <=3.33){
+        printf("Grade : B+");
+
+    }
+    else if (cgpa >2.67 && cgpa <=3) {
+        printf("Grade : B");
+
+    }
+    else if (cgpa >2.33 && cgpa <=2.67) {
+        printf("Grade : B-");
+    }
+    else if (cgpa >2 && cgpa <=2.33) {
+        printf("Grade : C+");
+    }
+    else if (cgpa == 2 ) {
+        printf("Grade : C");
+    }
+    else {
+        printf("Fail");
+    }
+    return 0;
+}
+
+
+
+
+Example 3 (Nested If-Else)
 
 
 
