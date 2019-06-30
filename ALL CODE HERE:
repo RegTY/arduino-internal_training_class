@@ -1,0 +1,182 @@
+CGPA CALCULATOR
+
+
+//*******************************************************************************
+#include <stdio.h>
+
+int main()
+{
+    float cgpa;
+    printf("Enter your CGPA");
+    scanf("%f", &cgpa);
+    printf ("%.1f",cgpa);
+    if (cgpa >= 3.75){
+        printf("Your Grade is an A");
+    }
+    else if (cgpa >= 3.5){
+        printf("Your Grade is an B+");
+    }
+    else if (cgpa >= 3.0){
+        printf("Your Grade is an B-");
+    }
+    else if (cgpa < 3.0){
+        printf("Your Grade is a failure");
+    }
+}
+
+//******************************************************************************
+
+NUMBER GUESSING GAME
+
+//********************************************************************************
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int answer;
+    int userAnswer;
+    printf("Enter a number:");
+    scanf("%i", &answer );
+    //clrscr();
+    system("clear");
+    
+    printf("Guess my number:");
+    scanf("%i", &userAnswer);
+    
+    while (userAnswer != answer){
+        int difference = userAnswer - answer;
+        if (userAnswer > answer && difference <= 10 && difference > 0){
+            printf("The number is lower! Your answer is very close! Try again!:");
+            scanf("%i", &userAnswer);
+        }
+         else if (userAnswer == 1337){
+            printf("You entered the cheat code, here is the answer: %i", answer);
+            scanf("%i", &userAnswer);
+         }
+        else if (userAnswer < answer && difference < 0 && difference >= -10){
+            printf("he number is higher, you are very close! Try again! ");
+            scanf("%i", &userAnswer);
+        }
+        if (userAnswer < answer){
+            printf("The number is higher! Try again! :");
+            scanf("%i", &userAnswer);
+        }
+        else if (userAnswer > answer){
+            printf("The number is lower, Try again!:");
+            scanf("%i", &userAnswer);
+        }
+    }
+    if (userAnswer == answer){
+    printf("You guessed the correct number!");
+    }
+}
+//********************************************************************************
+//********************************************************************************
+
+Example 1 ( Just If Else)
+
+
+//******************************************************************************
+
+
+#include <stdio.h>
+
+int main()
+{
+    float cgpa;
+    printf("Enter your CGPA:");
+    scanf("%.1f", &cgpa);
+    if (cgpa >= 2.0) {
+        printf("You passed!");
+        
+    }
+    else {
+        printf("You failed! Go take a sup paper!");
+    }
+
+    return 0;
+}
+//********************************************************************************
+Example 2 (if Else-if Else)
+
+
+//******************************************************************************
+
+#include <stdio.h>
+
+int main()
+{
+    float cgpa;
+    printf("Enter your CGPA:");
+    scanf("%f", &cgpa);
+    if (cgpa > 3.67) {
+        printf("Grade : A");
+    }
+    else if (cgpa >3.33 && cgpa <=3.67){
+        printf("Grade : A-");
+    }
+    else if (cgpa >3 && cgpa <=3.33){
+        printf("Grade : B+");
+
+    }
+    else if (cgpa >2.67 && cgpa <=3) {
+        printf("Grade : B");
+
+    }
+    else if (cgpa >2.33 && cgpa <=2.67) {
+        printf("Grade : B-");
+    }
+    else if (cgpa >2 && cgpa <=2.33) {
+        printf("Grade : C+");
+    }
+    else if (cgpa == 2 ) {
+        printf("Grade : C");
+    }
+    else {
+        printf("Fail");
+    }
+    return 0;
+}
+
+
+
+//********************************************************************************
+Example 3 (Nested If-Else)
+
+//********************************************************************************
+
+#include <stdio.h>
+
+int main()
+{
+    float cgpa;
+    char scholar_type[30];
+    printf("Enter Scholarship type:");
+    scanf("%s", scholar_type);
+
+    printf("Enter your CGPA:");
+    scanf("%f", &cgpa);
+
+    if(strcmp(scholar_type ,"A-levels")){
+            if(cgpa >= 3.5){
+                printf("you are eligible");
+            } else{
+                printf("You do not qualify :(");
+            }
+
+    } else if(strcmp(scholar_type ,"Trust")) {
+            if(cgpa >= 3){
+                printf("you are eligible");
+            } else{
+                printf("You do not qualify :(");
+            }
+
+    } else {
+        printf("Error");
+    }
+
+    return 0;
+}
+
+//********************************************************************************
